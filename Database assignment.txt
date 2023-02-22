@@ -1,0 +1,123 @@
+Answer 1:
+A database is an organized collection of structured information, or data, typically stored electronically in a computer system. A database is usually controlled by a database management system (DBMS).
+
+Difference Between SQL & NoSQL
+
+SQL is primarily called RDBMS or Relational Databases, whereas NoSQL is a Non-relational or Distributed Database.
+Comparing SQL vs NoSQL databases, 
+
+ 1. SQL databases are table-based databases, whereas NoSQL databases can be document-based, key-value pairs, and graph databases.
+ 2. SQL databases are vertically scalable, while NoSQL databases are horizontally scalable.
+ 3. SQL databases have a predefined schema, whereas NoSQL databases use a dynamic schema for unstructured data.
+ 4. Comparing NoSQL vs SQL performance, SQL requires specialized DB hardware for better performance while NoSQL 
+    uses commodit hardware.
+    
+Answer 2
+
+The DDL Commands in Structured Query Language are used to create and modify the schema of the database and its objects. The syntax of DDL commands is predefined for describing the data. The commands of Data Definition Language deal with how the data should exist in the database.
+
+Following are the five DDL commands in SQL:
+
+CREATE Command
+DROP Command
+ALTER Command
+TRUNCATE Command
+
+1. CREATE is a DDL command used to create databases, tables, triggers and other database objects.
+  example:
+  Create Database Books;  
+  
+  CREATE TABLE Student   
+(  
+Roll_No. Int ,    
+First_Name Varchar (20) ,    
+Last_Name Varchar (20) ,    
+Age Int ,  
+Marks Int ,   
+) ;    
+
+2. DROP is a DDL command used to delete/remove the database objects from the SQL database. We can easily remove the entire table, view, or index from the database using this DDL command.
+
+example:  DROP DATABASE Database_Name;  
+          DROP TABLE Table_Name;  
+
+3.  ALTER is a DDL command which changes or modifies the existing structure of the database, and it also changes the schema of database objects.
+
+example:  ALTER TABLE name_of_table ADD column_name column_definition; 
+
+4. TRUNCATE is another DDL command which deletes or removes all the records from the table.
+    This command also removes the space allocated for storing the table records.
+ 
+   example:   TRUNCATE TABLE Table_Name; 
+   
+   
+   
+ Answer 3:
+ 
+ DML is an abbreviation of Data Manipulation Language.
+
+The DML commands in Structured Query Language change the data present in the SQL database. We can easily access, store, modify, update and delete the existing records from the database using DML commands.
+
+
+Following are the four main DML commands in SQL:
+
+1. SELECT Command : 
+                   SELECT is the most important data manipulation command in Structured Query Language. The SELECT command shows      the records of the specified table. It also shows the particular record of a particular column by using the WHERE clause.
+       example: SELECT * FROM table_name; 
+                SELECT column_Name_1, column_Name_2, ….., column_Name_N FROM Name_of_table; 
+                
+2. INSERT Command :
+                    INSERT is another most important data manipulation command in Structured Query Language, which allows users to        insert data in database tables.
+                Example:  INSERT INTO TABLE_NAME (column_Name1,column_Name2,...column_NameN) VALUES                                                             (value_1, value_2, value_3, .... value_N ) ;   
+3. UPDATE Command:
+                   UPDATE is another most important data manipulation command in Structured Query Language, which allows users to                     update or modify the existing data in database tables.
+                Example: UPDATE Table_name SET [column_name1= value_1, ….., column_nameN = value_N] WHERE CONDITION;   
+
+4. DELETE Command:
+                  DELETE is a DML command which allows SQL users to remove single or multiple existing records from the database                     tables.
+                  Examples:  DELETE FROM Table_Name WHERE condition;
+                  
+ Answer 4
+ 
+ DQL statements are used for performing queries on the data within schema objects. The purpose of the DQL Command is to get some schema relation based on the query passed to it. We can define DQL as follows it is a component of SQL statement that allows getting data from the database and imposing order upon it. It includes the SELECT statement. This command allows getting the data out of the database to perform operations with it. When a SELECT is fired against a table or tables the result is compiled into a further temporary table, which is displayed or perhaps received by the program i.e. a front-end.
+ 
+ example:
+         SELECT CustomerName, City FROM Customers;
+         
+Answer 5:
+  Primary Key:
+         The primary key is a unique or non-null key that uniquely identifies every record in a table or relation. Each database needs a unique identifier for every row of a table, and the primary key plays a vital role in identifying rows in the table uniquely. The primary key column can't store duplicate values. It is also called a minimal super key; therefore, we cannot specify more than one primary key in any relationship.
+
+For example, we have a table named customer with attributes such as ID, Name, and City. Only the ID column can never contain duplicate and NULL values because each customer has a unique identification number. This feature helps to identify each record in the database uniquely. Hence, we can make the ID attribute a primary key.
+
+  Foregin Key:
+         The foreign key is a group of one or more columns in a database to uniquely identify another database record in some other table to maintain the referential integrity. It is also known as the referencing key that establishes a relationship between two different tables in a database. A foreign key always matches the primary key column in another table. It means a foreign key column in one table refers to the primary key column of another table. A foreign key is beneficial in relational database normalization, especially when we need to access records from other tables.
+
+Answer 6:
+     import mysql.connector
+mydb = mysql.connector.connect(
+  host="localhost",
+  user="abc",
+  password="password"
+)
+mycursor = mydb.cursor()
+mycursor.execute("CREATE DATABASE if not exists test2")
+mydb.close()
+
+
+
+
+ 
+
+
+Answer 7:
+
+The phases involved in the logical processing of an SQL query are as follows:
+1. FROM clause.
+2. ON clause.
+3. OUTER clause.
+4. WHERE clause.
+5. GROUP BY clause.
+6. HAVING clause.
+7. SELECT clause.
+8. DISTINCT clause.
